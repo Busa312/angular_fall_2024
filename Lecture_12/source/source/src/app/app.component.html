@@ -1,0 +1,27 @@
+<!-- <div class="red-text">text should be red</div>
+<app-button [text]="enteredText" (componentClicked)="onComponentClicked($event)"></app-button>
+<app-button [text]="'kide ufro axali'"></app-button>
+<app-button></app-button>
+<app-button></app-button>
+<input type="text" [(ngModel)]="enteredText"> -->
+<!-- <button (click)="show = !show">toggle</button>
+
+<div *ngIf="show; else notShow">
+    show
+</div>
+ajhsbdjhasbdjhbashjd
+<ng-template #notShow>
+    <div>
+        not showing
+    </div>
+</ng-template>
+
+<div *ngFor="let item of array">
+    <div [ngClass]="{'red-text': show}">{{ item.name }}  {{ item.age }}</div>
+</div> -->
+
+<form [formGroup]="form">
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="email">
+    <button (click)="submit()">submit</button>
+</form>
