@@ -1,0 +1,4 @@
+<button (click)="handleClick()" [ngStyle]="{'border-color': type === 'primary' ? 'blue' : 'black'}"
+[ngClass]="{'primary': type === 'primary', 'danger': type === 'danger'}">
+    {{text}}
+</button>

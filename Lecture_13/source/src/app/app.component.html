@@ -1,0 +1,19 @@
+<ng-template #shouldNotShow>
+  <p>should not show</p>
+</ng-template>
+
+<app-button [text]="text" (buttonClick)="handleButtonClick($event)"></app-button>
+<p (click)="handleClick()">{{ text }}</p>
+<app-button [type]="'danger'" [text]="'rame teqsti 2'"></app-button>
+
+<input type="text" [(ngModel)]="text">
+
+<div *ngIf="shouldShow; else shouldNotShow">
+  <p>{{ showText }}</p>
+</div>
+
+
+<div *ngFor="let item of dataArray">
+  <p *ngIf="item.length % 2 !== 0">{{ item }}</p>
+</div>
+
