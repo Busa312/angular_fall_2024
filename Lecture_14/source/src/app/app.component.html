@@ -1,0 +1,47 @@
+<!-- <form #userForm="ngForm" (ngSubmit)="userForm.valid && onSubmit()">
+
+  <input type="text" name="name" [(ngModel)]="user.name" [maxlength]="30" [minlength]="10" required/>
+  <div *ngIf="userForm.submitted && userForm.controls['name'].invalid">
+    <p>Name is invalid</p>
+  </div>
+
+  <input type="email" name="email" [(ngModel)]="user.email" required/>
+
+  <div *ngIf="userForm.submitted && userForm.controls['email'].invalid">
+    <p>Email is invalid</p>
+  </div>
+
+  <input type="number" name="age" [(ngModel)]="user.age" required/>
+
+  <div *ngIf="userForm.submitted && userForm.controls['age'].invalid">
+    <p>Age is invalid</p>
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form> -->
+
+<!-- <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactive()">
+
+  <input type="text" formControlName="name" [ngClass]="{'invalid': reactiveForm.get('name')?.invalid}" />
+  <div *ngIf="reactiveForm.get('name')?.invalid">
+    name is invalid
+  </div>
+
+  <input type="email" formControlName="email" [ngClass]="{'invalid': reactiveForm.get('email')?.invalid}" />
+  <div *ngIf="reactiveForm.get('email')?.invalid">
+    email is invalid
+  </div>
+
+  <input type="number" formControlName="age" [ngClass]="{'invalid': reactiveForm.get('age')?.invalid}" />
+  <div *ngIf="reactiveForm.get('age')?.invalid">
+    age is invalid
+  </div>
+  <button type="submit">Submit</button>
+</form> -->
+
+<form [formGroup]="reactiveForm">
+  <div *ngFor="let item of Object.keys(response)">
+    <input type="text" [formControlName]="item" />
+  </div>
+</form>
