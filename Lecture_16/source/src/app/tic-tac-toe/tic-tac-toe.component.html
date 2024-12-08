@@ -1,0 +1,20 @@
+<div class="header">
+    <div>Player 1: X</div>
+    <div>Turn of: {{player}}</div>
+    <div>Player 2: O</div>
+</div>
+
+<div *ngIf="result !== ''" class="result">
+    <span>{{result}}</span>
+    <button (click)="setUpGame()">RESTART</button>
+</div>
+
+<main class="board">
+    <div class="row" *ngFor="let item of board; let row = index">
+        <div class="cell" (click)="result === '' && onCellClick(row, col)"  *ngFor="let cell of item; let col = index">
+            <p [class.player1]="cell === 1" [class.player2]="cell === 2" >{{cell === 1? 'X' : cell === 2? 'O' : ''}}</p>
+        </div>
+    </div>
+</main>
+
+

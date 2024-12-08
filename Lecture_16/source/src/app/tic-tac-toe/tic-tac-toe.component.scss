@@ -1,0 +1,65 @@
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .row {
+        display: flex;
+        gap: 8px;
+    
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000000;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color:#CC2B52;
+
+            &:hover {
+                box-shadow: #000000 3px 3px 15px;
+            }
+
+            p {
+                font-family: monospace;
+                font-size: 36px;
+            }
+
+            .player1 {
+                color: #793FDF;
+            }
+
+            .player2 {
+                color: #00224D;
+            }
+        }
+    }
+}
+
+.header, .result {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    align-items: center;
+    font-size: 20px;
+    color: #740938;
+    background-color: #CC2B52;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.result {
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+
+    button {
+        padding: 12px 16px;
+        background-color: #740938;
+        color: #CC2B52;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
