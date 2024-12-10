@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.navigation {
+    display: flex;
+    gap: 16px;
+    font-size: 20px;
+    a {
+        text-decoration: none;
+    }
+}

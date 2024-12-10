@@ -1,0 +1,13 @@
+<nav>
+    first navigation
+    <p [routerLink]="['/home']" routerLinkActive="active" >Home</p>
+    <p [routerLink]="['/about']" routerLinkActive="active">About</p>
+    <p [routerLink]="['/login']" routerLinkActive="active">Login</p>
+</nav>
+
+<nav>
+    second naviagtion
+    <p (click)="navigateTo('home')" >Home</p>
+    <p (click)="navigateTo('about')" >About</p>
+</nav>
+<router-outlet></router-outlet>
