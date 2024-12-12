@@ -1,0 +1,7 @@
+<section *ngIf="data">
+  <div class="item-container" *ngFor="let item of data">
+    <div class="img"></div>
+    <h2>{{ item.movie }}</h2>
+    <p>rating: {{ item.rating }}</p>
+  </div>
+</section>

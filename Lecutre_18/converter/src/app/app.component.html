@@ -1,0 +1,16 @@
+<section *ngIf="form" class="container">
+  <main [formGroup]="form">
+    <div>
+      <input type="number" formControlName="first">
+      <select formControlName="firstCurr" >
+        <option *ngFor="let item of currencies" [value]="item.code">{{item.name}}</option>
+      </select>
+    </div>
+    <div>
+      <input type="number" formControlName="second">
+      <select formControlName="secondCurr">
+        <option  *ngFor="let item of currencies" [value]="item.code">{{item.name}}</option>
+      </select>
+    </div>
+  </main>
+</section>
