@@ -1,0 +1,12 @@
+<p>login form</p>
+<form *ngIf="form" [formGroup]="form">
+    <label>
+        username
+        <input type="text" formControlName="username">
+    </label>
+    <label>
+        password
+        <input type="password" formControlName="password">
+    </label>
+    <app-button label="login" (onClickEvent)="login()"></app-button>
+</form>

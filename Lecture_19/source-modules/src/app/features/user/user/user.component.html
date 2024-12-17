@@ -1,0 +1,26 @@
+<div *ngIf="user">
+    <div *ngIf="!edit; else editting">
+        <p>username: {{user.username}}</p>
+        <p>email: {{user.email}}</p>
+        <p>fullname: {{user.fullname}}</p>
+        <app-button label="edit" (onClickEvent)="edit = !edit"></app-button>
+    </div>
+    <ng-template #editting>
+        <form *ngIf="form" [formGroup]="form">
+            <label>
+                username
+                <input type="text" formControlName="username">
+            </label>
+            <label>
+                email
+                <input type="text" formControlName="email">
+            </label>
+            <label>
+                fullname
+                <input type="text" formControlName="fullname">
+            </label>
+            <app-button label="save" (onClickEvent)="save()"></app-button>
+        </form>
+    </ng-template>
+</div>
+
